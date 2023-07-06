@@ -1,0 +1,11 @@
+{
+    "id": "showshowway",
+    "version": "1.1.0",
+    "name": "ShowShowWay",
+    "description": "获取玩家的头，或者展示手上的物品",
+    "author": "WhiteXero",
+    "dependencies": {
+		"mcdreforged": ">=2.1.0"
+	},
+    "link": "https://github.com/WhiteXero/ShowShowWay"
+}
