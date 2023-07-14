@@ -38,4 +38,4 @@ def give_skull(server, info):
 
 def show_item(server, json):
 	server.execute('tellraw @a {}'.format(json))
-	server.execute('execute at @a run playsound minecraft:entity.arrow.hit_player player @a')
+    server.execute('execute run playsound minecraft:entity.arrow.hit_player player @a')
