@@ -19,8 +19,8 @@ def on_info(server: ServerInterface, info: Info):
             data = server.rcon_query('data get entity {} SelectedItem'.format(player))
             nbt = data.lstrip(re.search(r'\w+ has the following entity data: ', data).group()).replace('"', r'\"')
             json = '[{"text":"[ShowIt] "},{"text":"' + player + '","color":"yellow"},{"text":" 正在展示一个物品！ "},' \
-                                                                '{"text":"[点我查看]","color":"aqua","bold":"true",' \
-                                                                '"underlined":"true","hoverEvent":{' \
+                                                                '{"text":"[点我查看]","color":"aqua","bold":true,' \
+                                                                '"underlined":true,"hoverEvent":{' \
                                                                 '"action":"show_item","value":"' + nbt + '"}}]'
             show_item(server, json)
         else:
@@ -31,8 +31,8 @@ def on_info(server: ServerInterface, info: Info):
         player = re.search(r'^\w+', info.content).group()
         if nbt[0] == '{':
             json = '[{"text":"[ShowIt] "},{"text":"' + player + '","color":"yellow"},{"text":" 正在展示一个物品！ "},' \
-                                                                '{"text":"[点我查看]","color":"aqua","bold":"true",' \
-                                                                '"underlined":"true","hoverEvent":{' \
+                                                                '{"text":"[点我查看]","color":"aqua","bold":true,' \
+                                                                '"underlined":true,"hoverEvent":{' \
                                                                 '"action":"show_item","value":"' + nbt + '"}}]'
             show_item(server, json)
 
