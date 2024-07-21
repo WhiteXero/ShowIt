@@ -39,7 +39,7 @@ def on_info(server: ServerInterface, info: Info):
 
 def give_skull(server, info):
     info.cancel_send_to_server()
-    owner = '{SkullOwner:"' + info.content[8:] + '"}'
+    owner = '[profile={name:"' + info.content[8:] + '"}]'
     player = info.player
     message = '[ShowIt] 已给予你 {} 的头颅'.format(info.content[8:])
     server.logger.info('{} 获取 {} 的头颅'.format(player, info.content[8:]))
